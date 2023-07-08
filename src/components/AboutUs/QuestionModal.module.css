@@ -1,0 +1,43 @@
+.input label {
+  display: block;
+  margin-left: 4.5%;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.input input, textarea {
+  display: block;
+  margin: 0 4.5% 0.3rem;
+  width: 90%;
+  font-family: 'Lora', serif;
+  font-size: 1rem;
+  resize: none;
+  border-radius: 3px;
+  border: 1px solid black;
+}
+
+.invalid .questionArea {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.invalid input, textarea {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  /* box-shadow: 0 0 4px rgb(255, 0, 51, 0.25); */
+}
+
+.errorText {
+  margin: 0 4.5% 0.5rem;
+  font-weight: 500;
+  color: #ff0033;
+}
+
+.buttons {
+  display: flex;
+  justify-content: right;
+}
+
+.statusMsg {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}

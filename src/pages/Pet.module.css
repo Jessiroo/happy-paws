@@ -1,0 +1,44 @@
+.pet img {
+  max-width: 50%;
+  max-height: 70vh;
+  float: left;
+  margin: 1rem 1rem 0.5rem 0;
+  box-shadow: 0 2px 8px black;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.stats p {
+  margin: 0 1rem 0.7rem;
+}
+
+.text p {
+  white-space: pre-wrap;
+}
+
+.buttons {
+  display: flex;
+  justify-content: right;
+}
+
+@media (max-width: 610px) {
+  .pet img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.statusMsg {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 2rem 0 1rem;
+}

@@ -1,0 +1,27 @@
+.form h1 {
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.form fieldset {
+  border: none;
+  padding: 0;
+}
+
+.form h2 {
+  margin: 1rem 0 0.5rem;
+}
+
+.inputs {
+  display: flex;
+  justify-content: left;
+}
+
+.inputs label {
+  padding: 0 1rem 0 0;
+}
+
+.button {
+  display: flex;
+  justify-content: right;
+}

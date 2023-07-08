@@ -1,0 +1,19 @@
+.welcome {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.text {
+  text-align: center;
+}
+
+.text h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.statusMsg {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}

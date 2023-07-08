@@ -1,0 +1,73 @@
+.infoText h1 {
+  font-size: 2rem;
+  margin: 0.5rem 0 0.2rem;
+}
+
+.infoText h2, h3 {
+  margin: 0 1rem 0.5rem;
+}
+
+.infoText p {
+  margin: 0 3rem 1rem;
+}
+
+.contactButton {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.infoText .list {
+  margin: 0.5rem 5rem 0.7rem;
+}
+
+.infoText .contact {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.contact p {
+  margin-bottom: 0;
+}
+
+.contact .contactGroup {
+  margin-bottom: 1rem;
+}
+
+.slightBold {
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .infoText p {
+    margin: 0 1.5rem 1rem;
+  }
+  .infoText .list {
+    margin: 0.5rem 3rem 1rem;
+  }
+  .contact p {
+    margin-bottom: 0;
+  }
+  .contact .contactGroup {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .infoText h2, h3 {
+    margin: 0 0.5rem 0.5rem;
+  }
+  .infoText p {
+    margin: 0 0.5rem 1rem;
+  }
+  .infoText .list {
+    margin: 0.5rem 1.5rem 1rem;
+  }
+  .contact p {
+    margin-bottom: 0;
+  }
+  .contact .contactGroup {
+    margin-bottom: 1rem;
+  }
+}

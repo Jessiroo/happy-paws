@@ -1,0 +1,7 @@
+.toTop {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  bottom: 15px;
+  z-index: 50;
+}

@@ -1,0 +1,36 @@
+.dropdownNavLinks {
+  z-index: 60;
+  display: none;
+  position: fixed;
+  top: 68px;
+  right: 30px;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.navLink {
+  background-color: white;
+  border-radius: 3px;
+  border: 1px solid rgb(11, 101, 11);
+  padding: 0.5rem;
+}
+
+.navLink:hover {
+  box-shadow: 0 2px 2px #00000080;
+}
+
+.navLink a {
+  color: rgb(11, 101, 11) !important;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.navLink .active {
+  text-decoration: underline;
+}
+
+@media (max-width: 850px) {
+  .dropdownNavLinks {
+    display: block;
+  }
+}
