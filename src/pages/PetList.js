@@ -47,13 +47,6 @@ const PetListPage = () => {
     }, dataApplication);
   }, [sendRequest]);
 
-  // SCROLL LOGIC
-  const scrollWindow = (scrollPosition) => {
-      window.scroll(null, scrollPosition);
-  };
-
-  setTimeout(scrollWindow(filterCtx.scrollPosition), 1000);
-
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
     setFilterSelectorOpen(true);
@@ -112,6 +105,7 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
+      {window.scrollTo(null, filterCtx.scrollPosition)}
     </Fragment>
   );
 };
