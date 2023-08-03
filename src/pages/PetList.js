@@ -9,6 +9,7 @@ import FilterOptions from '../components/PetList/FilterOptions';
 import PetListItem from '../components/PetList/PetListItem';
 import classes from './PetList.module.css';
 import ToTopButton from '../components/PetList/ToTopButton';
+import ScrollLocation from '../components/PetList/ScrollLocation';
 
 // PAGE COMPONENT FUNCTION
 const PetListPage = () => {
@@ -105,7 +106,7 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
-      {window.scrollTo(null, filterCtx.scrollPosition)}
+      <ScrollLocation />
     </Fragment>
   );
 };
