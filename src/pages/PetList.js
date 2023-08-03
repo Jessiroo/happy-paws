@@ -48,7 +48,11 @@ const PetListPage = () => {
   }, [sendRequest]);
 
   // SCROLL LOGIC
-  window.scrollTo(null, filterCtx.scrollPosition);
+  const scrollWindow = (scrollPosition) => {
+      window.scroll(null, scrollPosition);
+  };
+
+  setTimeout(scrollWindow(filterCtx.scrollPosition), 1000);
 
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
