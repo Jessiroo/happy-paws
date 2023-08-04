@@ -9,6 +9,7 @@ import FilterOptions from '../components/PetList/FilterOptions';
 import PetListItem from '../components/PetList/PetListItem';
 import classes from './PetList.module.css';
 import ToTopButton from '../components/PetList/ToTopButton';
+import ScrollLocation from '../components/PetList/ScrollLocation';
 
 // PAGE COMPONENT FUNCTION
 const PetListPage = () => {
@@ -42,18 +43,19 @@ const PetListPage = () => {
       setAvailablePets(loadedPets);
     };
 
-    console.log("useEffect running");
     sendRequest({
       url: 'https://pet-adoptions-jm01-default-rtdb.firebaseio.com/Pets.json',
     }, dataApplication);
   }, [sendRequest]);
 
   // SCROLL LOGIC
-  console.log('component re-render');
+  useEffect(() => {
+    window.scrollTo(null, filterCtx.scrollPosition);
+  }, [filterCtx.scrollPosition])
 
-  const scrollWindow = (scrollPosition) => {
-    window.scrollTo(null, scrollPosition);
-  };
+  // const scrollWindow = (scrollPosition) => {
+  //   window.scrollTo(null, scrollPosition);
+  // };
   
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
@@ -96,6 +98,7 @@ const PetListPage = () => {
   // PAGE
   return (
     <Fragment>
+      <ScrollLocation />
       <Card>
         <h1>Find a Pet:</h1>
         {filterSelectorOpen && 
@@ -113,7 +116,6 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
-      {scrollWindow(filterCtx.scrollPosition)}
     </Fragment>
   );
 };

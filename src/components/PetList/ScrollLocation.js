@@ -1,13 +1,13 @@
-import { Fragment, useContext } from "react";
+// const ScrollLocation = (props) => {
+//   const script = 0;
+//   `<script>
+//     const scrollWindow = (scrollPosition) => {
+//       window.scrollTo(null, scrollPosition);
+//     };
+//     scrollWindow(filterCtx.scrollPosition);
+//   </script>`
 
-import FilterContext from "../../context/filter-context";
+//   return <Fragment />;
+// };
 
-const ScrollLocation = () => {
-  const { scrollPosition } = useContext(FilterContext); 
-
-  window.scrollTo(null, scrollPosition);
-
-  return <Fragment />;
-};
-
-export default ScrollLocation; 
+// export default ScrollLocation; 
