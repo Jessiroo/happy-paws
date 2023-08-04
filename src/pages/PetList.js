@@ -49,13 +49,15 @@ const PetListPage = () => {
   }, [sendRequest]);
 
   // SCROLL LOGIC
-  useEffect(() => {
-    window.scrollTo(null, filterCtx.scrollPosition);
-  }, [filterCtx.scrollPosition])
+  // useEffect(() => {
+  //   const scrollWindow = (scrollPosition) => {
+  //     window.scrollTo(null, scrollPosition);
+  //   };
 
-  // const scrollWindow = (scrollPosition) => {
-  //   window.scrollTo(null, scrollPosition);
-  // };
+  //   setTimeout(scrollWindow(filterCtx.scrollPosition), 3000);
+  //   console.log('scroll window effect running');
+  //   console.log(filterCtx.scrollPosition)
+  // }, [filterCtx.scrollPosition]);
   
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
@@ -98,7 +100,7 @@ const PetListPage = () => {
   // PAGE
   return (
     <Fragment>
-      <ScrollLocation />
+      <ScrollLocation scrollPosition={filterCtx.scrollPosition}>
       <Card>
         <h1>Find a Pet:</h1>
         {filterSelectorOpen && 
@@ -116,6 +118,7 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
+      </ScrollLocation>
     </Fragment>
   );
 };

@@ -1,13 +1,23 @@
-// const ScrollLocation = (props) => {
-//   const script = 0;
-//   `<script>
-//     const scrollWindow = (scrollPosition) => {
-//       window.scrollTo(null, scrollPosition);
-//     };
-//     scrollWindow(filterCtx.scrollPosition);
-//   </script>`
+import { useEffect } from "react";
 
-//   return <Fragment />;
-// };
+import classes from './ScrollLocation.module.css';
 
-// export default ScrollLocation; 
+const ScrollLocation = (props) => {
+
+  useEffect(() => {
+    console.log(props.scrollPosition, 'scroll')
+    if (props.scrollPosition > 0) {
+      setTimeout(() => {
+        window.scrollTo(0, props.scrollPosition);
+      }, 500);
+    };
+  }, [props.scrollPosition]);
+
+  return (
+    <div className={classes.scrollDiv}>
+      {props.children}
+    </div>
+  );
+};
+
+export default ScrollLocation; 
