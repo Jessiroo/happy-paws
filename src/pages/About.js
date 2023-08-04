@@ -4,6 +4,7 @@ import Card from '../components/Layout/Card';
 import Button from '../components/Layout/Button';
 import QuestionModal from '../components/AboutUs/QuestionModal';
 import classes from './InfoAbout.module.css';
+import ScrollToTop from '../components/Layout/ScrollToTop';
 
 const AboutPage = () => {
   const [showQuestionModal, setShowQuestionModal] = useState(false);
@@ -19,6 +20,7 @@ const AboutPage = () => {
   // COMPONENT RETURN
   return (
     <Card>
+      <ScrollToTop />
       <section className={classes.infoText}>
         {showQuestionModal && 
           <QuestionModal onClose={closeQuestionModalHandler}/>

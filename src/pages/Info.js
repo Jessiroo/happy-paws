@@ -1,9 +1,11 @@
 import Card from '../components/Layout/Card';
+import ScrollToTop from '../components/Layout/ScrollToTop';
 import classes from './InfoAbout.module.css';
 
 const InfoPage = () => {
   return (
     <Card>
+      <ScrollToTop />
       <section className={classes.infoText}>
         <h1>Adoption Information</h1>
         <p>Adopting a pet is like adding a new member to the family, and it is important for the happiness and well-being of both people and pets alike to ensure that the lifestyles and needs of both are taken into consideration when choosing your new friend. Some pets may have additional exercise or care requirements, or need for additional ongoing training. They may also be more or less suitable to homes with children or other pets. All of these things are important to keep in mind.</p>
