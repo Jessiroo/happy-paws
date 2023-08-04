@@ -47,17 +47,6 @@ const PetListPage = () => {
       url: 'https://pet-adoptions-jm01-default-rtdb.firebaseio.com/Pets.json',
     }, dataApplication);
   }, [sendRequest]);
-
-  // SCROLL LOGIC
-  // useEffect(() => {
-  //   const scrollWindow = (scrollPosition) => {
-  //     window.scrollTo(null, scrollPosition);
-  //   };
-
-  //   setTimeout(scrollWindow(filterCtx.scrollPosition), 3000);
-  //   console.log('scroll window effect running');
-  //   console.log(filterCtx.scrollPosition)
-  // }, [filterCtx.scrollPosition]);
   
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {

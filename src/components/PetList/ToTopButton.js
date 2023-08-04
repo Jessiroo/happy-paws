@@ -26,6 +26,7 @@ const ToTopButton = () => {
 
   const backToTopHandler = () => {
     filterCtx.setScroll(0);
+    window.scrollTo(0, 0);
   };
 
   return (

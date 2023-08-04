@@ -9,13 +9,14 @@ const ScrollLocation = (props) => {
     if (scrollPosition > 0) {
       setTimeout(() => {
         window.scrollTo(0, scrollPosition);
-      }, 500);
+      }, 1000);
     };
     if (scrollPosition === 0) {
       window.scrollTo(0, 0);
-    }
-    
+    }    
   }, [scrollPosition]);
+
+
 
   return (
     <div>
