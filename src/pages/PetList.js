@@ -54,8 +54,6 @@ const PetListPage = () => {
   const scrollWindow = (scrollPosition) => {
     window.scrollTo(null, scrollPosition);
   };
-
-  scrollWindow(filterCtx.scrollPosition);
   
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
@@ -115,6 +113,7 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
+      {scrollWindow(filterCtx.scrollPosition)}
     </Fragment>
   );
 };
