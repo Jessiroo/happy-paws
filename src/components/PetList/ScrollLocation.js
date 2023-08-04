@@ -1,17 +1,21 @@
-import { useEffect } from "react";
+import { useEffect, useContext } from "react";
 
-// import classes from './ScrollLocation.module.css';
+import FilterContext from "../../context/filter-context";
 
 const ScrollLocation = (props) => {
+  const { scrollPosition } = useContext(FilterContext);
 
   useEffect(() => {
-    console.log(props.scrollPosition, 'scroll')
-    if (props.scrollPosition > 0) {
+    if (scrollPosition > 0) {
       setTimeout(() => {
-        window.scrollTo(0, props.scrollPosition);
+        window.scrollTo(0, scrollPosition);
       }, 500);
     };
-  }, [props.scrollPosition]);
+    if (scrollPosition === 0) {
+      window.scrollTo(0, 0);
+    }
+    
+  }, [scrollPosition]);
 
   return (
     <div>

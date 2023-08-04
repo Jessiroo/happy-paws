@@ -4,7 +4,6 @@ import classes from './DropdownNavMenu.module.css';
 
 const dropdownNavMenu = (props) => {
   const navigatePetsHandler = () => {
-    props.onPets();
     props.onNavigate();
   };
 

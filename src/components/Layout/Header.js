@@ -1,7 +1,6 @@
-import { Fragment, useContext, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import FilterContext from '../../context/filter-context';
 import DropdownNavMenu from './DropdownNavMenu';
 import topImage from '../../assets/playingdog.jpg';
 import bottomImage from '../../assets/kitten.jpg';
@@ -9,11 +8,6 @@ import classes from './Header.module.css';
 
 const Header = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const filterCtx = useContext(FilterContext);
-
-  const resetPetsScrollHandler = () => {
-    filterCtx.setScroll(0);
-  };
 
   const dropdownToggleHandler = () => {
     setShowDropdown(!showDropdown);
@@ -34,7 +28,6 @@ const Header = () => {
           <NavLink 
             to='/pets'
             className={({ isActive }) => isActive ? classes.active : undefined}
-            onClick={resetPetsScrollHandler}
           >Pets</NavLink>
           <NavLink 
             to='/adoption-information'
@@ -51,7 +44,6 @@ const Header = () => {
         >&#9776;</button>
         {showDropdown && 
           <DropdownNavMenu 
-            onPets={resetPetsScrollHandler} 
             onNavigate={dropdownToggleHandler}
           />
         }
