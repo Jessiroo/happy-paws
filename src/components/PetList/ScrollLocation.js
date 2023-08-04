@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import classes from './ScrollLocation.module.css';
+// import classes from './ScrollLocation.module.css';
 
 const ScrollLocation = (props) => {
 
@@ -14,7 +14,7 @@ const ScrollLocation = (props) => {
   }, [props.scrollPosition]);
 
   return (
-    <div className={classes.scrollDiv}>
+    <div>
       {props.children}
     </div>
   );
