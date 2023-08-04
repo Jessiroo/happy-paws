@@ -43,11 +43,19 @@ const PetListPage = () => {
       setAvailablePets(loadedPets);
     };
 
+    console.log("useEffect running");
     sendRequest({
       url: 'https://pet-adoptions-jm01-default-rtdb.firebaseio.com/Pets.json',
     }, dataApplication);
   }, [sendRequest]);
 
+  // SCROLL LOGIC
+  console.log('component re-render');
+
+  const scrollWindow = (scrollPosition) => {
+    window.scrollTo(null, scrollPosition);
+  };
+  
   // ONCLICK HANDLERS
   const openFilterSelectorHandler = () => {
     setFilterSelectorOpen(true);
@@ -106,7 +114,8 @@ const PetListPage = () => {
         </ul>
       </Card>
       <ToTopButton />
-      <ScrollLocation />
+      {scrollWindow(filterCtx.scrollPosition)}
+      {/* <ScrollLocation /> */}
     </Fragment>
   );
 };

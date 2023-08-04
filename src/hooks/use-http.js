@@ -26,7 +26,7 @@ const useHttp = () => {
     }
     
     setIsLoading(false);
-  }, [])
+  }, []);
 
   return { 
     isLoading,
