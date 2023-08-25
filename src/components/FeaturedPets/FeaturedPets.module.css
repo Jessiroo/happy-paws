@@ -125,3 +125,20 @@
     display: none;
   }
 }
+
+@media (min-width: 2000px) {
+  .main img {
+    height: 750px;
+    width: 750px;
+  }
+
+  .flank img {
+    height: 550px;
+    width: 550px;
+  }
+
+  .scrollButton {
+    font-size: 5rem;
+    margin: 1.5rem;
+  }
+}
