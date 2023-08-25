@@ -59,17 +59,17 @@
 @media (min-width: 2000px) {
   .petCard {
     padding: 0.5rem 1.2rem 0.5rem;
-    height: calc(300px + 1.5rem);
+    height: calc(225px + 1.5rem);
   }
 
   .petCard img {
-    height: 300px;
-    width: 400px;
+    height: 225px;
+    width: 300px;
     margin-right: 1rem;
   }
 
   .petCard h1 {
-    margin-left: 400px;
+    margin-left: 300px;
     padding: 0 1rem 0.3rem;
     font-size: 2.5rem !important;
   }
