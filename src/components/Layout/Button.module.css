@@ -24,3 +24,15 @@
   color: rgb(36, 125, 36);
   border: 1px solid rgb(36, 125, 36);
 }
+
+@media (min-width: 2000px) {
+  .button {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .button {
+    font-size: 1.8rem;
+  }
+}

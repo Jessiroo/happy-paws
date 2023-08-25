@@ -1,5 +1,5 @@
 import { Fragment, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import DropdownNavMenu from './DropdownNavMenu';
 import topImage from '../../assets/playingdog.jpg';
@@ -18,7 +18,7 @@ const Header = () => {
     <Fragment>
       <header className={classes.header}>
         <div>
-          <h1>Happy Paws Adoptions</h1>
+          <Link to='/'><h1>Happy Paws Adoptions</h1></Link>
         </div>
         <span className={classes.expandedNavLinks}>
           <NavLink 

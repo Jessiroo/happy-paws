@@ -21,6 +21,7 @@
 .card h1 {
   margin: 0;
   padding: 0.5rem;
+  font-size: 2.5rem;
 }
 
 .card ul {
@@ -30,8 +31,37 @@
 }
 
 @media (min-width: 2000px) {
+  /* .cardContainer {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  } */
+
   .card {
-    width: 30%;
+    width: 40%;
+    justify-self: center;
+  }
+
+  .card h1 {
+    font-size: 5rem;
+  }
+
+  .card h2 {
+    font-size: 3rem;
+  }
+
+  .card h3 {
+    font-size: 2rem;
+  }
+
+  .card p, li {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 3000px) {
+  .card p, li {
+    font-size: 1.8rem;
   }
 }
 
