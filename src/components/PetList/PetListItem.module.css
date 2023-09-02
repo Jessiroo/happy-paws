@@ -3,7 +3,7 @@
   padding: 0.7rem 0.7rem 0.2rem;
   border-radius: 8px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
-  height: calc(150px + 0.7rem);
+  min-height: calc(150px + 0.7rem);
   /* min-height: 160px;
   min-width: 210px; */
 }
